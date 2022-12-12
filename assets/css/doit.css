@@ -1,0 +1,72 @@
+.arp-t2b button{width:120px;font-size:14px;height:auto;margin:10px;border:none;padding:10px 12px;background-color:#8775f5;border-radius:3px;color:#fefefe;transition:all .3s;}
+
+.arp-t2b button:hover{opacity:0.7;transition:all .3s;cursor:pointer;}
+
+.arp-t2b .TxtArea{width:100%;color:#797979;border:1px solid #dcdcdc;padding:15px;border-top-left-radius:5px;border-top-right-radius:5px;font-size:15px;outline:none;border-bottom:none;resize:none;}
+
+.drkM .arp-t2b .TxtArea{background-color:#252526;}
+.copyButton{position:relative;}
+
+.copyButton.active{background:#061A40;}
+
+.Btn-s{background:#f3f3f3;width:88%;padding:21px;margin-top:-4px;border-bottom-left-radius:7px;border-bottom-right-radius:7px;border:1px solid #dcdcdc;border-top:none;}
+
+.drkM .Btn-s{border-color:rgba(255,255,255,.1);background-color:#2d2d30;}
+
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid green;
+}
