@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>Button Generator</title>
+           <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .btn {
+  line-height: 24px;
+  height: 36px;
+  font-size: 15px;
+  vertical-align: top;
+  background-color: orange;
+}
+
+input.MyButton {
+width: 150px;
+padding: 6px;
+cursor: pointer;
+font-weight: bold;
+font-size: 15px;
+background: #3366cc;
+color: #fff;
+border: 1px solid #3366cc;
+border-radius: 10px;
+-moz-box-shadow:: 6px 6px 5px #999;
+-webkit-box-shadow:: 6px 6px 5px #999;
+box-shadow:: 6px 6px 5px #999;
+}
+input.MyButton:hover {
+color: #ffff00;
+background: #000;
+border: 1px solid #fff;
+}
+
+.responsive {
+  width: 50%;
+  height: auto;
+}
+
+input[type=text], select, textarea{
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid green;
+}
+
+.generate-markup {
+ align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+fieldset {
+border: 1px solid rgb(204, 204, 204) !important;
+padding: 0.4em !important;
+margin: 0 0 0 0 !important;
+-webkit-box-shadow: 10px #000;
+box-shadow: 10px #000;
+border-radius: 15px 15px 15px 15px;
+}
+
+  </style>
+  </head>
+  <body>
+
+<center>
+    <b>Button Generator Now On charifit.tech ✓</b>
+    
+    <br />
+    <br />
+    <u>Fill The following details
+    <br />
+    Click on Generate Button 
+    <br />
+    Now Final step, Click On Copy Button to Copy</u>
+</center>
+
+<br />
+                  
+
+<fieldset>
+     <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="Name" type="text" placeholder="Movie Name"/>&nbsp;</div>
+     
+      <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="Type" type="text" placeholder="Movie Type"/>&nbsp;</div>
+      
+       <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="Rating" type="text" placeholder="Rating"/>&nbsp;</div>
+       
+        <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="Language" type="text" placeholder="Movie Language"/>&nbsp;</div>
+        
+         <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="Duration" type="text" placeholder="Duration"/>&nbsp;</div>
+
+   <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="youtubeVID" type="text" placeholder="1080p link"/>&nbsp;</div>
+  
+  <div class="generator__questions" style="font-size: 18px; text-align: center;"><input id="headline" type="text" placeholder="720p link"/>&nbsp;</div>
+  
+  <div class="generator__questions" style="font-size: 18px; text-align: center;">
+    <input id="blurb" placeholder="480p link" type="text" />&nbsp;</div><div class="generator__questions" style="text-align: center;"><br /></div><div class="generator__questions" style="text-align: center;">&nbsp;
+  
+    <button class="generate-markup">Generate Code</button>
+  </div></br>
+  
+  
+  </fieldset>
+  
+  <br>
+  <br>
+  
+  
+  
+  <fieldset>
+  <center>
+<button class="btn" onclick="copyToClipboard('#p2')">Click To Copy</button></center>
+
+<br />
+  
+  
+  <div class="generator__markup">
+    <h1 style="text-align: center;">Copy Your Page</h1>
+    <pre><div style="text-align: center;" ></div><p id="p2"><code class="generator__markup-generated"></code></p><div style="text-align: center;"></div>
+</pre>
+</div></div>
+  
+  </fieldset>
+  
+<script type='text/javascript'>  
+  //<![CDATA[
+const generate = document.querySelector('.generate-markup');
+
+generate.addEventListener('click', () => {
+  const Name = document.querySelector('#Name').value;
+  const Type = document.querySelector('#Type').value;
+  const Rating = document.querySelector('#Rating').value;
+  const Language = document.querySelector('#Language').value;
+  const Duration = document.querySelector('#Duration').value;
+	const youtubeID = document.querySelector('#youtubeVID').value;
+	const headline = document.querySelector('#headline').value;
+	const blurb = document.querySelector('#blurb').value;
+	const markupContainer = document.querySelector('.generator__markup-generated');
+	
+	const markup = `
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>General</th>
+            <th>Information</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>${Name}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${Type}</td>
+            
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td>${Rating}</td>
+        </tr>
+        <tr>
+            <td>Language</td>
+            <td>${Language}</td>
+        </tr>
+        <tr>
+            <td>Duration</td>
+            <td>${Duration}</td>
+        </tr>
+        <tr class="active-row">
+            <td>Downloadable</td>
+            <td>Yes</td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+
+<br />
+<center>
+
+<a href="https://telegram.dog/ProShubham_XD">
+    <img src="https://lh3.googleusercontent.com/-8XRKYIVqIOM/Y0-nn5LAkzI/AAAAAAAAAD4/wgcMY_S0e9EO7xmsW3bSdRQ6g80LjCTIgCNcBGAsYHQ/s1600/1666164635345006-0.png" width="70%">
+</a>
+<hr>
+<br />
+<br />
+<a href="${youtubeID}"><button class="butn">Download 1080p</button></a>
+<br /><br />
+<a href="${headline}"><button class="butn">Download 720p </button></a>
+<br /><br />
+<a href="${blurb}"><button class="butn">Download 320p </button></a>
+<br /><br /><br />
+
+<a href="https://telegram.dog/MyMoviesFilmybot"><img src="https://lh3.googleusercontent.com/-EQrnyDCbfiI/ZAR56PQivwI/AAAAAAAAAYs/qMZdv8WGiVYcgTjGeeEyBcSNJ4Xq--XswCNcBGAsYHQ/s1600/1678014948372568-1.png" width="96%"></a>
+</center> 
+
+<br />
+
+<b>
+Filmywap Movies Download 420p 
+</b>
+<p>
+Filmywap is one of the most popular movie downloading websites. It offers a huge collection of movies in various formats including HD, MP4, and 3GP. You can find almost any movie on this website, from old classics to the latest blockbusters.
+</p><p>
+The best thing about Filmywap is that it is completely free to use. There are no hidden charges or membership fees. You can simply visit the website and start downloading movies. The quality of the downloads is also quite good.
+</p><p>
+However, there are a few things to keep in mind before using Filmywap. First of all, the website is full of ads and pop-ups. This can be quite annoying for some users. Secondly, the downloads are usually slow because of the high traffic on the site.  
+ </p>
+ 
+
+ <b>
+Filmywap Movies Download keywords 
+<b>
+    <p>
+Filmywap is a popular website for downloading Bollywood, Hollywood and Punjabi movies. You can find a wide range of movie genres on Filmywap and the website is updated regularly with new releases. If you're looking for a particular movie, you can use the search function to find it easily. Alternatively, you can browse through the different categories to find something that interests you.</p>
+<p>
+Once you've found a movie that you'd like to download, simply click on the link and choose the format that you prefer. Filmywap offers both HD and SD formats so that you can choose the one that best suits your needs. The download process is quick and easy, and once it's complete, you'll be able to watch your movie offline without any buffering or interruptions. </p>
+
+
+
+	`;
+	
+	markupContainer.textContent = markup;
+});
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+//]]>
+ </script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/3558192218-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY6PC3UxA5fpLW7R-FuiSlLMQ7e9Fg:1598384475652';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d4477755393253498573','//privacypolicy-generatortool.blogspot.com/','4477755393253498573');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '4477755393253498573', 'title': 'Privacy Policy Generator Tool', 'url': 'https://privacypolicy-generatortool.blogspot.com/', 'canonicalUrl': 'https://privacypolicy-generatortool.blogspot.com/', 'homepageUrl': 'https://privacypolicy-generatortool.blogspot.com/', 'searchUrl': 'https://privacypolicy-generatortool.blogspot.com/search', 'canonicalHomepageUrl': 'https://privacypolicy-generatortool.blogspot.com/', 'blogspotFaviconUrl': 'https://privacypolicy-generatortool.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': true, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Privacy Policy Generator Tool - Atom\x22 href\x3d\x22https://privacypolicy-generatortool.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Privacy Policy Generator Tool - RSS\x22 href\x3d\x22https://privacypolicy-generatortool.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Privacy Policy Generator Tool - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/4477755393253498573/posts/default\x22 /\x3e\n', 'meTag': '\x3clink rel\x3d\x22me\x22 href\x3d\x22https://www.blogger.com/profile/09226000421829809677\x22 /\x3e\n', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/8105d500df1535b6', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'Privacy Policy Generator Tool'}}, {'name': 'features', 'data': {'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'OK', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Privacy Policy Generator Tool', 'description': '', 'url': 'https://privacypolicy-generatortool.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'main', document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'main', document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'main', document.getElementById('HTML2'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>
